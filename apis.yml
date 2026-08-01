@@ -1,22 +1,91 @@
 aid: pico
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pico.png
 name: Pico
-description: Pico is a company surfaced as a portfolio company of bloomberg-beta and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Pico is a creator-monetization and CRM platform for online creators, publishers,
+  and media companies, built in New York and backed by Bloomberg Beta. It combines
+  an audience CRM with email capture, landing pages, paywalls, memberships, and
+  subscription payments in a single tool so creators can identify their audience,
+  gate premium content, and convert readers into paying members. Pico raised a
+  $6.5M round in 2021 ("Pico 2.0") and a $10M Series A in 2023, when it rebranded
+  to Hype (hype.co). It exposes a developer API — authenticated with an X-Api-Key
+  header and documented at docs.trypico.com — for searching and managing contacts
+  and integrating the platform into custom workflows.
 url: https://raw.githubusercontent.com/api-evangelist/pico/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
+x-aka: Hype
 x-backed-by:
 - bloomberg-beta
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Creator Economy
+- CRM
+- Memberships
+- Payments
+- Email Marketing
+- Newsletters
+- Monetization
+apis:
+- aid: pico:pico-api
+  name: Pico API
+  humanURL: https://docs.trypico.com/
+  baseURL: https://api.trypico.com/
+  tags:
+  - Contacts
+  - CRM
+  - Creators
+  properties:
+  - url: https://docs.trypico.com/
+    type: Documentation
+  - url: authentication/pico-authentication.yml
+    type: Authentication
+  description: >-
+    The Pico API lets developers build custom workflows and integrations on the
+    Pico creator platform — including searching and managing contacts across an
+    account. Every request authenticates with an X-Api-Key header carrying an
+    access token generated in the dashboard under Settings > Website.
+common:
+- type: DomainSecurity
+  url: security/pico-domain-security.yml
+- type: Website
+  url: https://trypico.com/
+- type: DeveloperPortal
+  url: https://docs.trypico.com/
+- type: Documentation
+  url: https://docs.trypico.com/
+- type: APIReference
+  url: https://docs.trypico.com/
+- type: GettingStarted
+  url: https://help.trypico.com/en/articles/5632118-using-the-pico-api
+- type: Support
+  url: https://help.trypico.com/
+- type: Authentication
+  url: authentication/pico-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 2
+  pass: local-v1
