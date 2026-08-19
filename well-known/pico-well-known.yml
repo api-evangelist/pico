@@ -1,0 +1,106 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTPS probes of every host named in apis.yml plus the successor host
+note: >-
+  Every /.well-known/ path was probed on every host this company has ever named and
+  NONE returned a document. No WellKnown, SecurityTxt or AgentCard pointer is emitted
+  from this file — it records an absence, not a presence. The Pico/Hype API surface is
+  retired: api.trypico.com no longer resolves (NXDOMAIN), docs.trypico.com returns an
+  S3 "NoSuchBucket" 404, and trypico.com 302s to the hype.co wind-down notice.
+hosts:
+- host: trypico.com
+  note: 302 redirect to https://hype.co on every path; no document served
+  status: redirect
+- host: www.trypico.com
+  note: 301 redirect to https://www.hype.co; no document served
+  status: redirect
+- host: docs.trypico.com
+  note: >-
+    404 on every path. The origin returns an S3 error document
+    (Code NoSuchBucket, BucketName docs.trypico.com) — the bucket that served the
+    Pico API reference has been deleted.
+  status: gone
+- host: api.trypico.com
+  note: NXDOMAIN — the documented API host has no DNS record and could not be probed
+  status: nxdomain
+- host: www.hype.co
+  note: 404 on every path; the host serves a single static acquisition notice
+  status: live
+documents:
+- host: docs.trypico.com
+  path: /.well-known/security.txt
+  status: 404
+- host: docs.trypico.com
+  path: /.well-known/openid-configuration
+  status: 404
+- host: docs.trypico.com
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: docs.trypico.com
+  path: /.well-known/oauth-protected-resource
+  status: 404
+- host: docs.trypico.com
+  path: /.well-known/api-catalog
+  status: 404
+- host: docs.trypico.com
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: docs.trypico.com
+  path: /.well-known/agent-card.json
+  status: 404
+- host: docs.trypico.com
+  path: /.well-known/agent.json
+  status: 404
+- host: www.hype.co
+  path: /.well-known/security.txt
+  status: 404
+- host: www.hype.co
+  path: /.well-known/openid-configuration
+  status: 404
+- host: www.hype.co
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: www.hype.co
+  path: /.well-known/oauth-protected-resource
+  status: 404
+- host: www.hype.co
+  path: /.well-known/api-catalog
+  status: 404
+- host: www.hype.co
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: www.hype.co
+  path: /.well-known/agent-card.json
+  status: 404
+- host: www.hype.co
+  path: /.well-known/agent.json
+  status: 404
+- host: trypico.com
+  path: /.well-known/security.txt
+  status: 302
+- host: trypico.com
+  path: /.well-known/agent-card.json
+  status: 302
+- host: trypico.com
+  path: /.well-known/agent.json
+  status: 302
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery was run in full against every host and missed
+    everywhere. Recorded here so a later round does not repeat it.
+  probes:
+  - {url: 'https://docs.trypico.com/openapi.json', status: 404}
+  - {url: 'https://docs.trypico.com/swagger.json', status: 404}
+  - {url: 'https://docs.trypico.com/llms.txt', status: 404}
+  - {url: 'https://www.hype.co/openapi.json', status: 404}
+  - {url: 'https://www.hype.co/swagger.json', status: 404}
+  - {url: 'https://www.hype.co/llms.txt', status: 404}
+  - {url: 'https://www.hype.co/api', status: 404}
+  - {url: 'https://www.hype.co/docs', status: 404}
+  - {url: 'https://www.hype.co/developers', status: 404}
+  - {url: 'https://app.hype.co/', status: 404}
+  graphql: not attempted — no /graphql surface is documented or reachable
+  mcp: no MCP endpoint is published by this company on any live host
+  agent_card: >-
+    Probed /.well-known/agent-card.json and the legacy /.well-known/agent.json on
+    every host. No 200 anywhere, so no a2a/ artifact was written.

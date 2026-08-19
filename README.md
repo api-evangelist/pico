@@ -42,6 +42,17 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pico is a company surfaced as a portfolio company of bloomberg-beta and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Pico was a creator-monetization and CRM platform for online creators and publishers, backed by
+Bloomberg Beta. It rebranded to **Hype** ([hype.co](https://www.hype.co/)) in 2023 and, in
+**February 2026, Hype was acquired by MMA.inc** and the product was wound down.
+
+**The Pico API is retired.** Probed 2026-08-13: the API host `api.trypico.com` no longer resolves
+(NXDOMAIN), the developer reference at `docs.trypico.com` returns an S3 `NoSuchBucket` 404,
+`trypico.com` 302s to the hype.co acquisition notice, and `app.hype.co` returns 404. No successor
+developer surface has been published on hype.co or mma.inc. Account, data-export and billing
+questions are directed to support@hype.co.
+
+See [`lifecycle/pico-lifecycle.yml`](lifecycle/pico-lifecycle.yml) for the dated timeline and
+evidence, and the `x-coverage` block in [`apis.yml`](apis.yml) for why this profile is thin.
 
 Backed by: bloomberg-beta

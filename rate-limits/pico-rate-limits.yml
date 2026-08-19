@@ -1,0 +1,17 @@
+generated: '2026-08-13'
+method: searched
+source: https://docs.trypico.com/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are published, and none can be observed. The Pico API reference at
+  docs.trypico.com — the only place limits were ever documented — now returns an S3
+  "NoSuchBucket" 404, and the API host api.trypico.com is NXDOMAIN, so no live
+  response headers (X-RateLimit-*, RateLimit-*, Retry-After) can be read either. The
+  successor site hype.co publishes no developer documentation of any kind. This zero
+  reflects a retired API, not an undocumented one.
+evidence:
+- {url: 'https://docs.trypico.com/', status: 404, note: 'S3 NoSuchBucket — reference deleted'}
+- {url: 'https://api.trypico.com/', status: 0, note: 'NXDOMAIN — cannot observe response headers'}
+- {url: 'https://www.hype.co/docs', status: 404}

@@ -1,0 +1,26 @@
+generated: '2026-08-13'
+method: searched
+source: registry searches across npm, PyPI and GitHub
+package_count: 0
+packages: []
+note: >-
+  No first-party client library exists for Pico or Hype on any public registry. npm
+  searches for "trypico", "hype.co" and "hypeco" return zero results; "pico-api"
+  returns only unrelated third-party packages (picos, @picocss/pico, @iota-pico/*).
+  PyPI "pico" is Fergal Walsh's HTTP framework and PyPI "hype" is Balanced's resource
+  mapper — neither is this company. The GitHub organizations trypico, pico, hypeco
+  and picoplatform do not exist; github.com/Hype-co exists but was created
+  2026-02-03 and has zero public repositories. No Packages or SDKs pointer is emitted
+  from this file — it records a verified absence, not a presence.
+registries_checked:
+- {registry: npm, query: trypico, result: 0}
+- {registry: npm, query: pico-api, result: 'unrelated third-party packages only'}
+- {registry: npm, query: hype.co, result: 0}
+- {registry: npm, query: hypeco, result: 0}
+- {registry: pypi, name: trypico, status: 404}
+- {registry: pypi, name: pico-api, status: 404}
+- {registry: pypi, name: pico, status: 200, official: false, note: 'Pico HTTP API Framework by fergalwalsh — unrelated'}
+- {registry: pypi, name: hype, status: 200, official: false, note: 'Balanced resource mapper — unrelated'}
+- {registry: github, org: trypico, status: 404}
+- {registry: github, org: hypeco, status: 404}
+- {registry: github, org: Hype-co, status: 200, public_repos: 0, note: 'empty org created 2026-02-03'}

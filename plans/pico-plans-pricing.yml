@@ -1,0 +1,17 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.hype.co/
+plan_count: 0
+plans: []
+note: >-
+  No pricing or plans are published. Pico/Hype was acquired by MMA.inc in February
+  2026 and the product was wound down: hype.co serves only an acquisition notice and
+  /pricing returns 404, the application at app.hype.co returns 404, and the former
+  Pico site trypico.com 302s to the notice. There is no self-serve tier, no
+  enterprise "contact sales" pricing page, and no API to meter — this is an honest
+  zero caused by the product being retired, not by a paywall or a sales gate.
+evidence:
+- {url: 'https://www.hype.co/pricing', status: 404}
+- {url: 'https://www.hype.co/', status: 200}
+- {url: 'https://app.hype.co/', status: 404}
+- {url: 'https://trypico.com/', status: 302}

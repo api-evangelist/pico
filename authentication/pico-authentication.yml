@@ -19,3 +19,11 @@ schemes:
     surface is documented; access is a single account-level API key.
   sources:
   - https://help.trypico.com/en/articles/5632118-using-the-pico-api
+x-status: historical
+x-status-note: >-
+  Re-probed 2026-08-13: this is now a HISTORICAL record, not a live auth contract.
+  The source article at help.trypico.com returns 403, the API reference at
+  docs.trypico.com returns an S3 "NoSuchBucket" 404, and the API host
+  api.trypico.com is NXDOMAIN. Pico rebranded to Hype and was acquired by MMA.inc in
+  February 2026; the API was withdrawn with it. Retained as the last captured
+  description of how the Pico API authenticated. See lifecycle/pico-lifecycle.yml.

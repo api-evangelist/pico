@@ -1,0 +1,63 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.hype.co/
+docs: https://www.hype.co/
+status: retired
+summary: >-
+  The Pico API is retired. Pico rebranded to Hype (hype.co) in 2023, and in
+  February 2026 Hype was acquired by MMA.inc and wound down. hype.co now serves a
+  single static acquisition notice; the application at app.hype.co returns 404, the
+  documented API host api.trypico.com no longer resolves, and the developer
+  reference at docs.trypico.com returns an S3 "NoSuchBucket" 404. No successor
+  developer surface has been published on hype.co or mma.inc.
+timeline:
+- date: '2023'
+  event: Pico rebrands to Hype; trypico.com begins redirecting to hype.co
+  source: https://www.hype.co/
+- date: '2026-02'
+  event: >-
+    Hype is acquired by MMA.inc. The hype.co homepage publishes "Hype is evolving
+    into the MMA.inc ecosystem", directs all account, data-export and billing
+    questions to support@hype.co, and states that existing user links and profiles
+    redirect to the notice page.
+  source: https://www.hype.co/
+- date: '2026-08-13'
+  event: >-
+    API surface confirmed gone on probe — api.trypico.com NXDOMAIN,
+    docs.trypico.com 404 NoSuchBucket, help.trypico.com 403, app.hype.co 404.
+  source: probe
+versioning:
+  scheme: uri-path
+  current: v0
+  note: >-
+    The retired reference was published as "Pico v0" at docs.trypico.com. No
+    versioning policy was ever published; the docs are no longer reachable.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No deprecation policy, Sunset/Deprecation header support (RFC 8594) or
+    end-of-life schedule was ever published. The API was withdrawn without a
+    documented deprecation process — the acquisition notice is the only
+    announcement, and it does not mention the API.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
+successor:
+  company: MMA.inc
+  url: https://www.mma.inc/
+  note: >-
+    Acquirer named on the hype.co notice. MMA.inc publishes no developer surface of
+    its own (probed /developers, /api, /docs, /openapi.json, /llms.txt — all 404),
+    so there is no successor API to follow. MMA.inc is a separate company and is
+    not profiled under this slug.
+contact: support@hype.co
+evidence:
+- {url: 'https://www.hype.co/', status: 200, note: 'acquisition notice, February 2026'}
+- {url: 'https://trypico.com/', status: 302, note: 'redirects to https://hype.co'}
+- {url: 'https://docs.trypico.com/', status: 404, note: 'S3 NoSuchBucket — API reference deleted'}
+- {url: 'https://api.trypico.com/', status: 0, note: 'NXDOMAIN — no DNS record'}
+- {url: 'https://app.hype.co/', status: 404}
+- {url: 'https://help.trypico.com/en/articles/5632118-using-the-pico-api', status: 403}
+- {url: 'https://www.mma.inc/developers', status: 404}
