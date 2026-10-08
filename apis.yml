@@ -99,6 +99,10 @@ apis:
     access token generated in the dashboard under Settings > Website. The API is
     retired along with the product; no successor API has been published by MMA.inc.
 common:
+- type: Plans
+  url: plans/pico-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/pico-rate-limits.yml
 - type: Website
   url: https://www.hype.co/
 - type: Support
