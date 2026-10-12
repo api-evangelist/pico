@@ -1,0 +1,128 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/pico/integrations
+checked:
+- https://composio.dev/toolkits/pico
+- https://monid.ai/tools/pico
+- https://n8n.io/integrations/pico/
+- https://zapier.com/apps/pico/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: pico
+  url: https://zapier.com/apps/pico/integrations
+  external_url: https://hype.co/
+  partner_tier: BRONZE
+  triggers:
+  - key: contact_created
+    label: Contact Created
+  - key: contact_deleted
+    label: Contact Deleted
+  - key: contact_updated
+    label: Contact Updated
+  - key: payment_created
+    label: Payment Created
+  - key: payment_deleted
+    label: Payment Deleted
+  - key: payment_updated
+    label: Payment Updated
+  actions: []
+  searches: []
+edges:
+- partner_name: Sailthru
+  partner: sailthru
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/pico/integrations/sailthru
+  direction: third-party
+  category: Marketing
+  partner_url: https://sailthru.com/
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/pico/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: Planning Center
+  partner: planning-center
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/pico/integrations/planning-center
+  direction: third-party
+  category: Fundraising
+  partner_url: https://planning.center/
+templates:
+- title: Add new Hype contacts to ActiveCampaign
+  url: https://zapier.com/apps/activecampaign/integrations/pico/336754/add-new-hype-contacts-to-activecampaign
+  apps:
+  - pico
+  - activecampaign
+- title: Update ActiveCampaign contacts for new user updates in Hype
+  url: https://zapier.com/apps/activecampaign/integrations/pico/336764/update-activecampaign-contacts-for-new-user-updates-in-hype
+  apps:
+  - pico
+  - activecampaign
+- title: Create subscribers to forms in Kit from new users sign up in Hype
+  url: https://zapier.com/apps/kit/integrations/pico/336767/create-subscribers-to-forms-in-kit-from-new-users-sign-up-in-hype
+  apps:
+  - pico
+  - kit
+- title: Add subscribers to forms in Kit for new contacts updated in Hype
+  url: https://zapier.com/apps/kit/integrations/pico/336811/add-subscribers-to-forms-in-kit-for-new-contacts-updated-in-hype
+  apps:
+  - pico
+  - kit
+- title: Create subscribers in MailerLite when new users sign up in Hype
+  url: https://zapier.com/apps/mailerlite-classic/integrations/pico/336839/create-subscribers-in-mailerlite-when-new-users-sign-up-in-hype
+  apps:
+  - pico
+  - mailerlite-classic
+- title: Create/update MailerLite subscribers when new users update accounts in Hype
+  url: https://zapier.com/apps/mailerlite-classic/integrations/pico/336843/createupdate-mailerlite-subscribers-when-new-users-update-accounts-in-hype
+  apps:
+  - pico
+  - mailerlite-classic
+- title: Create channel messages in Slack from new payments in Hype
+  url: https://zapier.com/apps/pico/integrations/slack/336847/create-channel-messages-in-slack-from-new-payments-in-hype
+  apps:
+  - pico
+  - slack
+- title: Create channel messages in Slack from new canceled payments in Hype
+  url: https://zapier.com/apps/pico/integrations/slack/336854/create-channel-messages-in-slack-from-new-canceled-payments-in-hype
+  apps:
+  - pico
+  - slack
+- title: Share updates from Hype as funnel events to Facebook Conversions
+  url: https://zapier.com/apps/facebook-conversions/integrations/pico/789654/share-updates-from-hype-as-funnel-events-to-facebook-conversions
+  apps:
+  - pico
+  - facebook-conversions
+- title: Send funnel events to Facebook Conversions from Hype
+  url: https://zapier.com/apps/facebook-conversions/integrations/pico/1130173/send-funnel-events-to-facebook-conversions-from-hype
+  apps:
+  - pico
+  - facebook-conversions
+- title: Add new Hype contacts as TinyEmail subscribers
+  url: https://zapier.com/apps/pico/integrations/tinyemail/1157192/add-new-hype-contacts-as-tinyemail-subscribers
+  apps:
+  - pico
+  - tinyemail
+- title: Create and update Flodesk subscribers from new Hype contacts
+  url: https://zapier.com/apps/flodesk/integrations/pico/1394019/create-and-update-flodesk-subscribers-from-new-hype-contacts
+  apps:
+  - pico
+  - flodesk
+template_total: 15
