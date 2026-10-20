@@ -1,4 +1,4 @@
-generated: '2026-10-12'
+generated: '2026-10-20'
 method: searched
 source:
 - https://zapier.com/apps/pico/integrations
@@ -32,39 +32,6 @@ marketplace_apps:
   actions: []
   searches: []
 edges:
-- partner_name: Sailthru
-  partner: sailthru
-  partner_match: name-exact
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/pico/integrations/sailthru
-  direction: third-party
-  category: Marketing
-  partner_url: https://sailthru.com/
-- partner_name: Facebook Lead Ads
-  partner: facebook-lead-ads
-  partner_match: name-exact
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/pico/integrations/facebook-lead-ads
-  direction: third-party
-  category: Ads & Conversion
-  partner_url: https://www.facebook.com/business/ads/lead-ads
-- partner_name: Planning Center
-  partner: planning-center
-  partner_match: name-exact
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/pico/integrations/planning-center
-  direction: third-party
-  category: Fundraising
-  partner_url: https://planning.center/
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
@@ -90,6 +57,42 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: Sailthru
+  partner: sailthru
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/pico/integrations/sailthru
+  direction: third-party
+  category: Marketing
+  partner_url: https://sailthru.com/
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: domain+name-among-holders
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/pico/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: Planning Center
+  partner: planning-center
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/pico/integrations/planning-center
+  direction: third-party
+  category: Fundraising
+  partner_url: https://planning.center/
 templates:
 - title: Add new Hype contacts to ActiveCampaign
   url: https://zapier.com/apps/activecampaign/integrations/pico/336754/add-new-hype-contacts-to-activecampaign
